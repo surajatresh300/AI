@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancer Detection Using TensorFlow & CNN</title>
+    <style>
+        /* General Reset */
+        body, h1, h2, p, a, ul, li, button, label {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Body Styling */
+        body {
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #0078D7;
+            color: white;
+            padding: 20px 0;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .intro {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .notice {
+            color: white;
+            background-color: #0078D7;
+            padding: 10px;
+            font-weight: bold;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .section {
+            margin-top: 30px;
+        }
+
+        .section h2 {
+            color: #0078D7;
+            margin-bottom: 10px;
+        }
+
+        .section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+
+        /* Form Styling */
+        .form-group {
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        label {
+            margin-right: 10px;
+        }
+
+        /* Link and Button Styling */
+        .link, button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+
+        .link:hover, button:hover {
+            background-color: #218838;
+        }
+
+        /* Footer Styling */
+        footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #777;
+            text-align: center;
+        }
+
+        /* Hidden Content */
+        .hidden-page {
+            display: none;
+        }
+
+        .show {
+            display: block;
+        }
+    </style>
+    <script>
+        function togglePage() {
+            const mainPage = document.getElementById('main-page');
+            const hiddenPage = document.getElementById('hidden-page');
+
+            if (mainPage.style.display === 'none') {
+                mainPage.style.display = 'block';
+                hiddenPage.style.display = 'none';
+            } else {
+                mainPage.style.display = 'none';
+                hiddenPage.style.display = 'block';
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Main Page -->
+    <div id="main-page">
+        <header>
+            <h1>Cancer Detection Using TensorFlow & CNN</h1>
+        </header>
+        <main>
+            <p class="intro">
+                Early detection of cancer can save lives. By harnessing the power of 
+                <strong>TensorFlow</strong> and <strong>Convolutional Neural Networks (CNN)</strong>, 
+                modern technology is revolutionizing the way cancer is detected and diagnosed. 
+                Explore how AI and deep learning are shaping the future of healthcare.
+            </p>
+            <marquee class="notice">Breaking Barriers in Cancer Detection with AI!</marquee>
+
+            <div class="section">
+                <h2>Topics You’re Interested In:</h2>
+                <div class="form-group">
+                    <label><input type="checkbox" value="TensorFlow Basics"> TensorFlow Basics</label>
+                    <label><input type="checkbox" value="CNN for Image Recognition"> CNN for Image Recognition</label>
+                    <label><input type="checkbox" value="Medical Applications of AI"> Medical Applications of AI</label>
+                    <label><input type="checkbox" value="Cancer Detection Techniques"> Cancer Detection Techniques</label>
+                </div>
+                <button onclick="alert('Preferences Saved!')">Submit Preferences</button>
+            </div>
+
+            <button class="link" onclick="togglePage()">Learn More</button>
+        </main>
+        <footer>
+            <p>© 2024 Cancer Research AI. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Hidden Page -->
+    <div id="hidden-page" class="hidden-page">
+        <header>
+            <h1>How TensorFlow & CNN Work in Cancer Detection</h1>
+        </header>
+        <main>
+            <div class="section">
+                <h2>Step 1: Image Preprocessing</h2>
+                <p>
+                    Medical images are first preprocessed to enhance clarity and ensure consistent 
+                    input for the model. Techniques like normalization, resizing, and augmentation 
+                    are commonly applied.
+                </p>
+                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240401180836/Python-Libraries-for-For-Image-processing.png" alt="Image preprocessing techniques">
+            </div>
+
+            <div class="section">
+                <h2>Step 2: Model Architecture</h2>
+                <p>
+                    CNNs consist of layers like convolutional, pooling, and fully connected layers. 
+                    These layers extract and learn features like edges, shapes, and patterns from 
+                    medical images.
+                </p>
+                <ul>
+                    <li><strong>Convolutional Layers:</strong> Extract spatial features.</li>
+                    <li><strong>Pooling Layers:</strong> Reduce image dimensions while retaining features.</li>
+                    <li><strong>Fully Connected Layers:</strong> Classify images as cancerous or non-cancerous.</li>
+                </ul>
+                <img src="https://via.placeholder.com/800x400" alt="CNN architecture visualization">
+            </div>
+
+            <div class="section">
+                <h2>Step 3: Training & Validation</h2>
+                <p>
+                    The model is trained using a dataset of labeled medical images. A portion of the 
+                    dataset is reserved for validation to ensure the model performs well on unseen data.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>Applications</h2>
+                <p>
+                    AI-powered cancer detection systems are used in:
+                </p>
+                <ul>
+                    <li>Mammogram analysis for breast cancer detection</li>
+                    <li>Identifying lung nodules in CT scans</li>
+                    <li>Detecting skin cancer using dermoscopy images</li>
+                </ul>
+            </div>
+
+            <button class="link" onclick="togglePage()">Back to Overview</button>
+        </main>
+        <footer>
+            <p>© 2024 Cancer Research AI. All Rights Reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
